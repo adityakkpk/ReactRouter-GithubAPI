@@ -20,12 +20,12 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <Link to="/" className="hover:underline">
+                                    <Link to="/ReactRouter-GithubAPI/" className="hover:underline">
                                         Home
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/user/aditya" className="hover:underline">
+                                    <Link to="/ReactRouter-GithubAPI/user/aditya" className="hover:underline">
                                         Github
                                     </Link>
                                 </li>

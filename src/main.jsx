@@ -8,11 +8,11 @@ import { githubInfo } from './components/Github/Github.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout/>} >
+    <Route path='/ReactRouter-GithubAPI/' element={<Layout/>} >
       <Route path='' element={<Home />} />
       <Route
         loader={githubInfo}
-        path='/user/aditya' 
+        path='/ReactRouter-GithubAPI/user/aditya' 
         element={<Github />}
       />
     </Route>
