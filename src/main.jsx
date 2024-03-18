@@ -9,7 +9,7 @@ import { githubInfo } from './components/Github/Github.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/ReactRouter-GithubAPI/' element={<Layout/>} >
-      <Route path='' element={<Home />} />
+      <Route path='/ReactRouter-GithubAPI/' element={<Home />} />
       <Route
         loader={githubInfo}
         path='/ReactRouter-GithubAPI/user/aditya' 
