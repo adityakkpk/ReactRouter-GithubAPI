@@ -63,10 +63,10 @@ export default function Header() {
                     <div class={` ${ isHide ? "hidden" : "block" } lg:hidden w-full lg:w-auto lg:order-1`} id='menu'>
                         <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                             <li>
-                                <a activeclassname="text-orange-700" class="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0" href="/ReactRouter-GithubAPI/">Home</a>
+                                <Link activeclassname="text-orange-700" class="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0" to="/ReactRouter-GithubAPI/">Home</Link>
                             </li>
                             <li>
-                                <a activeclassname="text-orange-700" aria-current="page" class="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 active" href="/ReactRouter-GithubAPI/user/aditya">GitHub</a>
+                                <Link activeclassname="text-orange-700" aria-current="page" class="block py-2 pr-4 pl-3 duration-200 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 active" to="/ReactRouter-GithubAPI/user/aditya">GitHub</Link>
                             </li>
                         </ul>
                     </div>
