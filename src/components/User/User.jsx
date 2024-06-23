@@ -1,15 +1,18 @@
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import { useGithubInfoLoader } from "../../Hooks/useGithubInfoLoader";
-import { useState } from "react";
 
-const Github = () => {
-  const data = useGithubInfoLoader('adityakkpk');
-  const reposData = useGithubInfoLoader(`adityakkpk/repos`);
+function User() {
+  const { userid } = useParams();
+  const data = useGithubInfoLoader(userid);
+  const reposData = useGithubInfoLoader(`${userid}/repos`);
 
   const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1); // initial page
 
   const paginatedItems = reposData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   const totalPages = Math.ceil(reposData.length / itemsPerPage);
+
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -25,16 +28,15 @@ const Github = () => {
             <p className="text-gray-600 text-start">@{data.login}</p>
           </div>
         </div>
-        <p class="mt-4 text-gray-900">
-          React | JavaScript | TailwindCss | Full Stack Web Development - Mern
-          Stack
-        </p>
-        <div class="mt-4">
-          <p class="text-gray-900">Public Repositories: {data.public_repos}</p>
+        <p className="mt-2 text-gray-900">{data.bio}</p>
+        <div className="mt-2">
+          <p className="text-gray-900">
+            Public Repositories: {data.public_repos}
+          </p>
         </div>
       </div>
-      <div class="mt-8">
-        <h2 class="text-2xl font-bold">Repositories</h2>
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold">Repositories</h2>
         {paginatedItems.map((elem, index) => {
           return (
             <a href={`${elem.html_url}`} key={index} target="_blank">
@@ -64,6 +66,6 @@ const Github = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Github;
+export default User;
