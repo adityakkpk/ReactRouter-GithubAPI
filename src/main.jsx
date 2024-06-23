@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Layout from './Layout.jsx'
-import Home from './Components/Home/Home.jsx'
-import Github from './Components/Github/Github.jsx'
-import User from './Components/User/User.jsx'
+import Home from './components/Home/Home.jsx'
+import Github from './components/Github/Github.jsx'
+import User from './components/User/User.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(

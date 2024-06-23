@@ -81,7 +81,7 @@ export default function Footer() {
                         <Link to="#" className="text-gray-500 hover:text-gray-900">
                             <svg
                                 className="w-4 h-4"
-                                ariaHidden="true"
+                                ariaidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor"
                                 viewBox="0 0 8 19"
@@ -97,7 +97,7 @@ export default function Footer() {
                         <Link to="#" className="text-gray-500">
                             <svg
                                 className="w-4 h-4"
-                                ariaHidden="true"
+                                ariaidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor"
                                 viewBox="0 0 21 16"
@@ -109,7 +109,7 @@ export default function Footer() {
                         <Link to="#" className="text-gray-500">
                             <svg
                                 className="w-4 h-4"
-                                ariaHidden="true"
+                                ariaidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor"
                                 viewBox="0 0 20 17"
@@ -125,7 +125,7 @@ export default function Footer() {
                         <Link target='_blank' to="https://github.com/adityakkpk" className="text-gray-500">
                             <svg
                                 className="w-4 h-4"
-                                ariaHidden="true"
+                                ariaidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
