@@ -6,13 +6,15 @@ function User() {
   const { userid } = useParams();
   const data = useGithubInfoLoader(userid);
   const reposData = useGithubInfoLoader(`${userid}/repos`);
+  console.log(data.message);
 
   const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1); // initial page
-
-  const paginatedItems = reposData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  if (data.message === 'Not Found') return <div>User Not Found</div>
+  
+  const paginatedItems = reposData.length > 1 ? reposData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage) : [""];
   const totalPages = Math.ceil(reposData.length / itemsPerPage);
-
+  
 
   return (
     <div className="container mx-auto px-4 py-8">

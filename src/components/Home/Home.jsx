@@ -12,7 +12,7 @@ export default function Home() {
               Enter GitHub Username&nbsp;
               <input
                 type="text"
-                className="border border-gray-500 rounded focus:outline-none px-1 font-thin text-xl"
+                className="border border-gray-500 rounded focus:outline-none px-1 font-thin md:text-xl text-base"
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Enter username"
               />
