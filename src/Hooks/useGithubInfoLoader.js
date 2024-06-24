@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 
-export const useGithubInfoLoader = (username) => {
+let isLoading = true;
+
+const useGithubInfoLoader = (username) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -9,7 +11,10 @@ export const useGithubInfoLoader = (username) => {
         })
         .then(res => res.json())
         .then(res => setData(res))
+        isLoading = false;
     }, [])
 
     return data;
 }
+
+export {isLoading, useGithubInfoLoader}

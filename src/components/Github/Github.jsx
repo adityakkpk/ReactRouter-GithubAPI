@@ -1,4 +1,4 @@
-import { useGithubInfoLoader } from "../../Hooks/useGithubInfoLoader";
+import { useGithubInfoLoader, isLoading } from "../../Hooks/useGithubInfoLoader";
 import { useState } from "react";
 
 const Github = () => {
@@ -8,7 +8,8 @@ const Github = () => {
   const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1); // initial page
 
-  if (!data.name) return <div className="bg-gray-200 h-10 py-10 flex justify-center items-center w-full">User Not Found</div>
+  if (isLoading) return <div className="bg-gray-200 h-10 py-10 flex justify-center items-center w-full">Loading...</div>
+  else if (!data.name) return <div className="bg-gray-200 h-10 py-10 flex justify-center items-center w-full">User Not Found</div>
 
   const paginatedItems = reposData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   const totalPages = Math.ceil(reposData.length / itemsPerPage);
@@ -27,16 +28,16 @@ const Github = () => {
             <p className="text-gray-600 text-start">@{data.login}</p>
           </div>
         </div>
-        <p class="mt-4 text-gray-900">
+        <p className="mt-4 text-gray-900">
           React | JavaScript | TailwindCss | Full Stack Web Development - Mern
           Stack
         </p>
-        <div class="mt-4">
-          <p class="text-gray-900">Public Repositories: {data.public_repos}</p>
+        <div className="mt-4">
+          <p className="text-gray-900">Public Repositories: {data.public_repos}</p>
         </div>
       </div>
-      <div class="mt-8">
-        <h2 class="text-2xl font-bold">Repositories</h2>
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold">Repositories</h2>
         {paginatedItems.map((elem, index) => {
           return (
             <a href={`${elem.html_url}`} key={index} target="_blank">

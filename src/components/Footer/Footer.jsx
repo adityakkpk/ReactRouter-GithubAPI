@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Link to="/" className="flex items-center rounded-full border border-black justify-center p-2 px-3">
+            <Link to="/" className="flex items-center justify-center p-2 px-3">
               <img
                 src="/github.svg"
                 className="h-12 invert w-10"
@@ -27,7 +27,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/user/aditya" className="hover:underline">
+                  <Link to="/github" className="hover:underline">
                     Github
                   </Link>
                 </li>

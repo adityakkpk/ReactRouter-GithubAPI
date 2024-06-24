@@ -4,15 +4,15 @@ import { useState } from "react";
 export default function Home() {
   const [username, setUsername] = useState("");
   return (
-    <div className="mx-auto w-full max-w-7xl">
-      <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
-        <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
-          <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto">
-            <h2 className="text-4xl font-bold sm:text-5xl">
-              Enter GitHub Username&nbsp;
+    <div className="mx-auto my-20 w-full max-w-7xl">
+      <aside className="flex lg:justify-between justify-center m-10 mx-auto flex-wrap gap-20 items-center w-full overflow-hidden text-black p-2">
+        <div className="order-2">
+          <div className="max-w-xl space-y-8 text-center lg:text-right sm:ml-auto">
+            <h2 className="text-5xl font-bold">
+              <p>Enter GitHub Username&nbsp;</p>
               <input
                 type="text"
-                className="border border-gray-500 rounded focus:outline-none px-1 font-thin md:text-xl text-base"
+                className="border border-gray-500 rounded focus:outline-none px-1 font-thin text-xl"
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Enter username"
               />
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
+        <div className="order-1">
           <img
             className="w-96"
             src="https://i.ibb.co/5BCcDYB/Remote2.png"

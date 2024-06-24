@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { useGithubInfoLoader } from "../../Hooks/useGithubInfoLoader";
+import { useGithubInfoLoader, isLoading } from "../../Hooks/useGithubInfoLoader";
 
 function User() {
   const { userid } = useParams();
@@ -10,7 +10,8 @@ function User() {
   const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1); // initial page
   
-  if (!data.name) return <div className="bg-gray-200 h-10 py-10 flex justify-center items-center w-full">User Not Found</div>
+  if (isLoading) return <div className="bg-gray-200 h-10 py-10 flex justify-center items-center w-full">Loading...</div>
+  else if (!data.name) return <div className="bg-gray-200 h-10 py-10 flex justify-center items-center w-full">User Not Found</div>
   
   const paginatedItems = reposData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   const totalPages = Math.ceil(reposData.length / itemsPerPage);
