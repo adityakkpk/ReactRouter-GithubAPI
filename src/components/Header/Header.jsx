@@ -42,12 +42,12 @@ export default function Header() {
               onClick={handleClick}
               onBlur={() => {
                 setTimeout(() => {
-                  setIsHide(!isHide);
+                  setIsHide(true);
                 }, 500);
               }}
             >
               <svg
-                className="h-6 w-10 text-gray-800"
+                className="h-6 w-10 text-gray-800 dark:invert"
                 fill="none"
                 viewBox="0 0 24 22"
                 stroke="currentColor"
