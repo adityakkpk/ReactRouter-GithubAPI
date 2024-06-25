@@ -77,8 +77,8 @@ export default function Header() {
                   to="/"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700 dark:text-gray-200"
-                    } border-b border-gray-100 md:hover:text-gray-100 md:border-0 hover:text-gray-100 md:p-0`
+                      isActive ? "text-orange-700 dark:text-orange-400" : "text-gray-700 dark:text-gray-200"
+                    } border-b border-gray-100 md:hover:text-orange-400 dark:hover:text-orange-700 md:border-0 hover:text-orange-400 md:p-0`
                   }
                 >
                   Home
@@ -90,8 +90,8 @@ export default function Header() {
                   to="/github"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700 dark:text-gray-200"
-                    } border-b border-gray-100 md:hover:text-gray-100 md:border-0 hover:text-gray-100 md:p-0`
+                      isActive ? "text-orange-700 dark:text-orange-400" : "text-gray-700 dark:text-gray-200"
+                    } border-b border-gray-100 md:hover:text-orange-400 dark:hover:text-orange-700 md:border-0 hover:text-orange-400 md:p-0`
                   }
                 >
                   Github
@@ -112,8 +112,8 @@ export default function Header() {
                   activeclassname="text-orange-700"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700 dark:text-gray-200"
-                    } border-b border-gray-100 md:hover:text-gray-100 md:border-0 hover:text-gray-100 md:p-0`
+                      isActive ? "text-orange-700 dark:text-orange-400" : "text-gray-700 dark:text-gray-200"
+                    } border-b border-gray-100 md:hover:text-orange-400 dark:hover:text-orange-700 md:border-0 hover:text-orange-400 md:p-0`
                   }
                   to="/"
                 >
@@ -126,8 +126,8 @@ export default function Header() {
                   aria-current="page"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 ${
-                      isActive ? "text-orange-700" : "text-gray-700 dark:text-gray-200"
-                    } border-b border-gray-100 md:hover:text-gray-100 md:border-0 hover:text-gray-100 md:p-0`
+                      isActive ? "text-orange-700 dark:text-orange-400" : "text-gray-700 dark:text-gray-200"
+                    } border-b border-gray-100 md:hover:text-orange-400 dark:hover:text-orange-700 md:border-0 hover:text-orange-400 md:p-0`
                   }
                   to="/github"
                 >
