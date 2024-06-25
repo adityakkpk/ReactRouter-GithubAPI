@@ -39,7 +39,7 @@ function User() {
         </div>
       </div>
       <div className="mt-8">
-        <h2 className="text-2xl font-bold">Repositories</h2>
+        <h2 className="text-2xl font-bold dark:text-white">Repositories</h2>
         {paginatedItems.map((elem, index) => {
           return (
             <a href={`${elem.html_url}`} key={index} target="_blank">
