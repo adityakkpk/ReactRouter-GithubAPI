@@ -15,7 +15,7 @@ const Github = () => {
   const totalPages = Math.ceil(reposData.length / itemsPerPage);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 max-w-7xl">
       <div className="max-w-3xl mx-auto mt-8 p-4 bg-gray-200 rounded-lg shadow-md">
         <div className="flex items-center gap-4">
           <img
