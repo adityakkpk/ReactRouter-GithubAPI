@@ -1,8 +1,26 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    return () => sessionStorage.setItem("user", username);
+  }, [username]);
+
+  useEffect(() => {
+    const user = sessionStorage.getItem("user");
+    if (user) {
+      setUsername(user);
+    }
+  }, []);
+
+  const handleEnter = (event) => {
+    if(event.key === "Enter") {
+      window.location.href = `/user/${username}`;
+    }
+  }
+
   return (
     <div className="mx-auto my-20 w-full max-w-7xl">
       <aside className="flex lg:justify-between justify-center m-10 mx-auto flex-wrap gap-20 items-center w-full overflow-hidden text-black p-2">
@@ -14,7 +32,9 @@ export default function Home() {
                 type="text"
                 className="border border-gray-500 rounded focus:outline-none px-1 font-thin text-xl"
                 onChange={(e) => setUsername(e.target.value)}
+                onKeyDown={(e) => handleEnter(e)}
                 placeholder="Enter username"
+                value={username}
               />
               &nbsp;
             </h2>
