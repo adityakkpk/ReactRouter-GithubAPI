@@ -68,7 +68,7 @@ export default function Home() {
         <div className="order-1">
           <img
             className="w-96"
-            src="https://i.ibb.co/5BCcDYB/Remote2.png"
+            src="/Remote2.png"
             alt="image1"
           />
         </div>
